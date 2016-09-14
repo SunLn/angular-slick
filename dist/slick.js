@@ -128,6 +128,7 @@ angular.module('slick', []).directive('slick', [
               if (scope.onAfterChange) {
                 scope.onAfterChange();
               }
+              scope.$emit('slideChange', currentSlide);
               if (currentIndex != null) {
                 return scope.$apply(function () {
                   currentIndex = currentSlide;
